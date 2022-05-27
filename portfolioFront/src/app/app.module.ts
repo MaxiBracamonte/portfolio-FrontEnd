@@ -4,10 +4,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { EducacionComponent } from './educacion/educacion/educacion.component';
+import { ExperienciaComponent } from './components/experiencia/experiencia.component';
+import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { UsuarioComponent } from './components/usuario/usuario.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EducacionComponent,
+    ExperienciaComponent,
+    ProyectosComponent,
+    SkillsComponent,
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,
