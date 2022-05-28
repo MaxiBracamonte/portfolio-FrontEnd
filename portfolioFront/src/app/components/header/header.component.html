@@ -1,0 +1,11 @@
+
+<div class="row">
+    <app-logo-ap></app-logo-ap>
+    <app-banner></app-banner>
+</div>
+
+<!-- Codigo del BackEnd -->
+<div *ngIf="usuario">
+    <h1>{{usuario.nombre}}</h1>
+    <img src="{{usuario.urlImagen}}" alt="">
+</div>

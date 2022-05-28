@@ -1,1 +1,53 @@
-<p>usuario works!</p>
+<nav>
+    <ul>
+        <li class="nav"><a class="nav-link" href="#trabajos">EXPERIENCIA LABORAL</a></li>
+        <li class="nav"><a class="nav-link" href="#skills">H&S SKILLS</a></li>
+        <li class="nav"><a class="nav-link" href="#main-container">ESTUDIOS</a></li>
+        <li class="nav"><a class="nav-link" href="#proyectos">PROYECTOS</a></li>
+    </ul> 
+</nav>
+
+<div class="container" *ngFor="let usuario of usuarios">
+    <div class="column">
+        <img src={{usuario.urlImagen}} alt="foto de carolina pettinaroli" id="foto_cv"> 
+        <div id="eliminar-editar-sobremi">
+            <button (click)="onOpenModal(null!,'add')" type="button" class="botones_contenido">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+            <button (click)="onOpenModal(usuario,'edit')" type="button" class="botones_contenido">
+                <i class="fa-solid fa-pen"></i>
+            </button>
+            <button (click)="onOpenModal(usuario,'delete')"  type="button" class="botones_contenido">
+                <i class="fa-solid fa-eraser"></i>  
+            </button>
+        </div>
+        <h1> {{usuario.nombre}}<span id="strong">{{usuario.nombre}> </span> </h1>
+        <h2> {{usuario.titulo}} </h2>
+     
+    </div>
+    <div class="column2">
+        <div class="sobremi">
+            <div class="sobremi2" *ngFor="let usuario of usuarios">
+                <span class="sobremiparrafo"> {{usuario.descripcion}}</span>
+                <div class="edit-parrafo" id="eliminar-editar-sobremi" >
+                    <button (click)="onOpenModal(null!,'add')" type="button" class="botones_contenido">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <button (click)="onOpenModal(usuario,'edit')" type="button" class="botones_contenido">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                    <button (click)="onOpenModal(usuario,'delete')"  type="button" class="botones_contenido">
+                        <i class="fa-solid fa-eraser"></i>
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="column3" *ngFor="let usuario of usuarios">
+        <a href="https://wa.me/{{usuario.email}}" class="whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>        
+    </div>
+</div>
+
+
+
