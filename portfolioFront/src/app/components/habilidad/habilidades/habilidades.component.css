@@ -1,0 +1,8 @@
+.espacio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    padding-bottom: 2rem;
+    padding-left: 5rem;
+      
+ } 

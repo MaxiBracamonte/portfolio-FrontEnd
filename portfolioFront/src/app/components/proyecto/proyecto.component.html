@@ -1,0 +1,11 @@
+<div class="container-fluid my-5">
+  <div class="titulo">
+    <div class="main-title">
+      <h2>Proyect<span>os</span><span class="bg-text">Mis proyectos</span></h2>
+    </div>
+    <app-boton-pro *ngIf="esAdmin" class="boton" color="{{abrirProyecto ? 'black' : 'blue'}}"
+      texto="{{abrirProyecto ? '-' : '+'}}" (btnClick)="toogleAgregarProyecto()">
+    </app-boton-pro>
+  </div>
+  <app-proyectos></app-proyectos>
+</div>

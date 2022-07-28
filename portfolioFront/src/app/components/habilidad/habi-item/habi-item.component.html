@@ -1,0 +1,55 @@
+
+
+                 <div class="progress-bars py-5">
+                    <h4 class="titulo">{{habi.titulo}}</h4>
+                    <circle-progress 
+                    [percent]=habi.porcentaje
+                    [title]="habi.titulo"
+                    [subtitle]="habi.porcentaje+'%'"
+                    [radius]="70"
+                    [responsive]="false"
+                    [outerStrokeWidth]="8"
+                    [innerStrokeWidth]="4"
+                    [outerStrokeColor]="'#27AE60'"
+                    [innerStrokeColor]="'#C7E596'"
+                    [animation]="true"
+                    [animationDuration]="300"
+                    [showTitle]="false"
+                    [showUnits]="false"
+                    [units]= "habi.porcentaje+'%'"
+                    [space]="10"
+                    subtitleFontSize=20
+                    titleFontSize=20   
+                    subtitleFontWeight=100
+                    titleFontWeight=100   
+                    unitsFontSize=20           
+                  ></circle-progress>
+         
+                    <fa-icon *ngIf="esAdmin" id="delete" [icon]="faDelete" (click)="eliminarHabi(habi)"></fa-icon>
+                    <fa-icon *ngIf="esAdmin" id="edit" [icon]="faPencil" (click)="openModal()"></fa-icon>                 
+                </div>
+
+<div *ngIf="abrirModal == true">
+    <div class="contEditar">
+        <button class="cerrar" (click)="cerrarModal()">Cerrar</button>
+        <h2>Editar Item</h2>
+        <div class="formulario">
+            <form [formGroup]="activeForm" novalidate>
+
+                <div class="form-control">
+                    <label for="titulo">Puesto</label>
+                    <input formControlName="titulo" type="text" name="titulo" id="titulo" placeholder="{{habi.titulo}}"
+                        required>
+                </div>
+
+                <div class="form-control">
+                    <label for="porcentaje">Ubicacion del trabajo</label>
+                    <input formControlName="porcentaje" type="number" name="porcentaje" id="porcentaje"
+                        placeholder="{{habi.porcentaje}}" required>
+                </div>
+
+                <input type="button" value="Actualizar Item" (click)="editarHabilidad(activeForm)" class="boton">
+            </form>
+        </div>
+    </div>
+</div>

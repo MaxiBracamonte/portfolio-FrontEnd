@@ -1,21 +1,14 @@
-export interface Usuario{
-
-     id:number;    
-     nombre: string ;
-     email: string ;
-     titulo: string ;
-     descripcion: string;
-     urlImagen: string; 
-}
-
-/*export interface Persona {
-    id: number;
+export class Usuario {
     nombre: string;
-    apellido: string;
-    ocupacion: string;
-    telefono: string;
+    nombreUsuario: string;
     email: string;
-    sobremi: string;
-    urlImagen: string;
+    password: string;
 
-}  */
+    constructor(nombre: string, nombreUsuario: string, email: string, password: string) {
+        this.nombre = nombre;
+        this.nombreUsuario = nombreUsuario;
+        this.email = email;
+        this.password = password;
+    }
+
+}

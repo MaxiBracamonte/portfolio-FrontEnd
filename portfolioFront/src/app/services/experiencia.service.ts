@@ -4,29 +4,36 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Experiencia } from '../models/experiencia';
 
-
 @Injectable({
   providedIn: 'root'
 })
 export class ExperienciaService {
-  private apiServerUrl = environment.apiBaseUrl;
 
-  constructor(private http: HttpClient) { }
+  apiExp = environment.apiExp;
 
-  public getExperiencia(): Observable<Experiencia[]> {
-    return this.http.get<Experiencia[]>(`${this.apiServerUrl}/experiencia/all`);
+  constructor(
+    private http: HttpClient
+  ) { }
+
+  getExperiencia(): Observable<Experiencia[]> {
+    return this.http.get<Experiencia[]>(this.apiExp)
   }
 
-  public updateExperiencia(experiencia: Experiencia): Observable<Experiencia> {
-    return this.http.put<Experiencia>(`${this.apiServerUrl}/experiencia/update`, experiencia);
-  } 
-
-  public addExperiencia(experiencia: Experiencia): Observable<Experiencia> {
-    return this.http.post<Experiencia>(`${this.apiServerUrl}/experiencia/add`, experiencia);
+  get(id: number): Observable<Experiencia> {
+    const url = `${this.apiExp}/${id}`
+    return this.http.get<Experiencia>(url);
   }
 
-  public deleteExperiencia(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiServerUrl}/experiencia/delete/${id}`);
+  masExperiecnias(formData: FormData): Observable<any> {
+    return this.http.post(this.apiExp + 'crear', formData);
   }
-  
+
+  editExperiencia(id: number, formData: FormData): Observable<any> {
+    return this.http.put(this.apiExp + `editar/${id}`, formData)
+  }
+
+  eliminarExperiencia(id: number): Observable<Experiencia> {
+    return this.http.delete<Experiencia>(this.apiExp + `eliminar/${id}`)
+  }
+
 }

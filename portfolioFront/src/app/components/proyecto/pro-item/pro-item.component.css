@@ -1,0 +1,49 @@
+
+#edit {
+    margin: 0px 0px 0px 10px;
+}
+
+#edit:hover {
+    color: rgb(156, 156, 156);
+}
+
+#delete:hover {
+    color: brown;
+}
+
+fa-icon:hover {
+    font-size: 20px;
+}
+
+fa-icon {
+    cursor: pointer;    
+    padding: 2px;  
+    float: inline-end;
+}
+.btn-group{
+    float: inline-end;
+}
+
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+.card{
+    background-color: #191d2b;
+}
+
+
+
+
+
+

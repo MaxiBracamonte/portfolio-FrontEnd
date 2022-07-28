@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-front",
+  "name": "proyecto-frf",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -18,13 +18,21 @@
     "@angular/platform-browser": "~13.3.0",
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
+    "@fortawesome/angular-fontawesome": "^0.10.2",
+    "@fortawesome/fontawesome-free": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@popperjs/core": "^2.11.4",
+    "bootstrap": "^5.1.3",
+    "bootstrap-icons": "^1.9.1",
+    "jquery": "^3.6.0",
+    "ng-circle-progress": "^1.6.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~13.3.6",
-    "@angular/cli": "~13.3.6",
+    "@angular-devkit/build-angular": "~13.3.1",
+    "@angular/cli": "~13.3.1",
     "@angular/compiler-cli": "~13.3.0",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",

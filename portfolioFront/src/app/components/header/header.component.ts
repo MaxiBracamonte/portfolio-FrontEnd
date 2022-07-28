@@ -1,8 +1,6 @@
-import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from 'src/app/models/usuario';
-import { HeaderService } from 'src/app/services/header.service';
-
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-header',
@@ -11,19 +9,49 @@ import { HeaderService } from 'src/app/services/header.service';
 })
 export class HeaderComponent implements OnInit {
 
-  public usuario: Usuario | undefined;
-  public editUsuario: Usuario | undefined;
-  
-  constructor(private headerService: HeaderService) { }
+  public okMenu: boolean = false;
+  public estaLogeado: boolean = false;
+  public abrirFormularioLogin: boolean = false;
+  public abrirModalReg: Boolean = false;
+
+  faLogin = faAngleRight;
+  toggleNavbar = true;
+
+  constructor(
+    private tokenService: TokenService
+  ) { }
 
   ngOnInit(): void {
-    this.getUser();
-
+    this.estaLogeado = this.tokenService.estaLogeado();
   }
 
-  public getUser():void{
-    this.headerService.getUser().subscribe({next: (response: Usuario) =>{this.usuario=response;
-    }, error:(error:HttpErrorResponse)=>{alert(error.message);}});
+  onMenu() {
+    this.okMenu = true;
+  }
+
+  cerrarMenu(){
+    this.okMenu = false
+  }
+
+  cerrarSesion(){
+    this.tokenService.logOut();
+  }
+
+  abrirModal(){
+    this.abrirFormularioLogin = true;
+  }
+
+  cerrarModal(){
+    this.abrirFormularioLogin = false;
+  }
+
+  abrirModalRegistro(){
+    this.abrirModalReg = true;
+  }
+
+  cerrarModalRegistro(){
+    this.abrirModalReg = false;
+    this.abrirFormularioLogin = true;
   }
 
 }
