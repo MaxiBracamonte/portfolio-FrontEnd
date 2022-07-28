@@ -1,0 +1,51 @@
+
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">     
+          <a class="navbar-brand" href="#!">      
+              <img src="../../../assets/APLogo.png" class="img1" alt="Logo Argentina Programa">
+         </a> 
+             
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleNavbar = !toggleNavbar"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item"><a class="nav-link active" aria-current="page" href="#myPage">Inicio</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#sobremi">Sobre mi</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#footer">Contacto</a></li>
+                 
+              </ul>
+              <ul></ul>
+              <ul class="nav navbar-nav navbar-right" *ngIf="estaLogeado">
+                <li><a href="#"><i class="fa-solid fa-right-from-bracket" (click)="cerrarSesion()">Salir</i></a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right" *ngIf="!estaLogeado">
+                <li><a href="#"><i class="fa-solid fa-right-from-bracket" (click)="abrirModal()">Iniciar</i></a></li>
+              </ul>              
+          </div>
+      </div>
+    </nav>
+
+    <div class="loginform" *ngIf="abrirFormularioLogin == true">
+      <div class="modal" (click)="cerrarModal()"></div>
+      <div class="modal-body">
+          <div class="modal-content">
+              <div class="loginText" *ngIf="!abrirModalReg">
+                  <h4>Utiliza las siguientes credenciales:</h4>
+                  <p>Usuario: <b>Maxi</b></p>
+                  <p>Contraseña: <b>1234</b></p>
+                  <app-login></app-login>
+                  <p>O crea una cuenta propia: </p>
+                  <button (click)="abrirModalRegistro()">Crear cuenta</button>
+              </div>
+              <div  *ngIf="abrirModalReg">
+                  <button (click)="cerrarModalRegistro()"> <--Regresar</button>
+                  <app-registro></app-registro>
+              </div>
+          </div>
+      </div>
+    </div>
+          
+    
+
+  
+
+    

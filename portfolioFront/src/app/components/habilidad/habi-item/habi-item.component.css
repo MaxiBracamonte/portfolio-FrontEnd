@@ -1,0 +1,29 @@
+
+fa-icon {
+    cursor: pointer;
+}
+fa-icon:hover {
+    font-size: 20px;
+}
+
+#edit {
+    margin: 0px 0px 0px 10px;
+}
+
+#edit:hover {
+    color: rgb(156, 156, 156);
+}
+
+#delete:hover {
+    color: brown;
+}
+
+circle-progress{
+    position: relative;
+}
+
+.titulo{
+    position:relative;
+    text-align: center;   
+    float: inline-start;
+}

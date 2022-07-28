@@ -1,0 +1,23 @@
+
+header {
+  min-height: 25vh;
+  color: #FFFFFF;
+  overflow: hidden;
+  padding: 2rem 18rem;
+}
+
+section {
+  min-height: 20vh;
+  width: 100%; 
+  left: 0;
+  top: 0;
+  padding: 2rem 18rem;
+}
+footer{
+  min-height: 20vh;
+  width: 100%; 
+  left: 0;
+  top: 0;
+  padding: 2rem 18rem;
+}
+

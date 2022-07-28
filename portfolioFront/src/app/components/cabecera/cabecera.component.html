@@ -1,0 +1,7 @@
+<div class="text-center my-5">       
+        <app-boton-per *ngIf="esAdmin" class="boton" color="{{abrirPerfil ? 'black' : 'blue'}}"
+            texto="{{abrirPerfil ? '-' : '+'}}" (btnClick)="toogleAgregarPerfil()">
+        </app-boton-per>
+ 
+    <app-perfiles></app-perfiles>
+</div>

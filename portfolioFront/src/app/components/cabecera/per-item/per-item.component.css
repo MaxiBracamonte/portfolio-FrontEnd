@@ -1,0 +1,48 @@
+
+header {
+    width: 100%; 
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgPerfil {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: none;
+    margin: 0px 0px 0px 0px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+#edit {
+    margin: 0px 0px 0px 10px;
+}
+
+#edit:hover {
+    color: rgb(156, 156, 156);
+}
+
+#delete:hover {
+    color: brown;
+}
+
+fa-icon:hover {
+    font-size: 20px;
+}
+
+fa-icon {
+    cursor: pointer;
+    float: inline-end;
+    padding: 2px;
+}

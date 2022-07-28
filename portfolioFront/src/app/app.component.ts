@@ -1,46 +1,22 @@
-import { HttpErrorResponse } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import { Usuario } from './models/usuario';
-import { UsuarioService } from './services/usuario.service';
+import { Component } from '@angular/core';
+import { TokenService } from './services/token.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
 
-  public usuarios: Usuario[] = [];
-  public usuario: Usuario | undefined;
- 
+  public estaLogeado: boolean = false;
 
-  constructor(private usuarioService: UsuarioService) { }
+  constructor(
+    private tokenService: TokenService
+  ) { }
 
   ngOnInit(): void {
-    this.getUsuarios();
+    this.estaLogeado = this.tokenService.estaLogeado();
   }
-  //agregado
-  public getUsuario():void{
-    this.usuarioService.getUsuario().subscribe({
-      next:(Response: Usuario) => {
-        this.usuario=Response;
-      },
-      error:(error:HttpErrorResponse)=>{
-        alert(error.message);
-      }
-    });
-  }
-  //video
-  public getUsuarios():void{
-    this.usuarioService.getUsuarios().subscribe(
-      (Response: Usuario[]) => {
-        this.usuarios=Response;
-      },
-      (error:HttpErrorResponse)=>{
-        alert(error.message);
-      }
-    );
-  }  
-
   
+
 }

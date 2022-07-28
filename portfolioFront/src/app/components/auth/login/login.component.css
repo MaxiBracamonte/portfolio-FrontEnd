@@ -1,0 +1,25 @@
+.formLogin {
+    background-color: #191d2b;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid white;
+    margin: 0px 0px 20px 0px;
+}
+
+.form-group {
+    background-color: transparent;
+    border: transparent;
+}
+
+.form-group input {
+    width: 90%;
+    height: 40%;
+    padding: 3px 7px;
+    font-size: 15px;
+    margin: 0px 0px 0px 18px;
+}
+
+.form-group button {
+    margin: 10px;
+}

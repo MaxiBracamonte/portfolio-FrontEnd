@@ -1,0 +1,49 @@
+
+
+.loginText p {
+    line-height: 5px;
+}
+
+
+.modal {   
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.589);
+   
+}
+
+.modal-body {       
+    position: absolute;   
+    z-index: 1100;
+
+}
+
+.modal-content {
+    background-color: #191d2b;
+    font-family: "Poppins", sans-serif;
+    width: 400px;
+    height: auto;    
+    padding: 10px;
+    text-align: center;    
+}
+ 
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    }
+  
+.navbar-nav li a:hover {
+    color: #27AE60 !important;
+  }
+  
+.container-fluid {
+    padding: 0 100px
+  }
+
+.img1 {
+    width: 250px;
+    height: 110px;
+    margin-left: 0;       
+}
+
+
+

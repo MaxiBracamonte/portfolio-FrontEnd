@@ -1,0 +1,40 @@
+.form {
+    margin: 50px 30px 0px 30px;
+    background-color: #191d2b;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    border-radius: 10px;
+    border: 0px;
+}
+
+.form-control {
+    background-color: transparent;
+    border: transparent;
+}
+
+.form-control label {
+    display: block;
+    color: white;
+}
+
+.form-control textarea {
+    width: 100%;
+}
+
+.boton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    background-color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 3px 7px 3px 7px;
+}
+
+.custum-file-input {
+    color: white;
+}

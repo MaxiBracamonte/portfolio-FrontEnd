@@ -1,0 +1,11 @@
+<div class="container-fluid my-5">
+  <div class="espaTitulo">
+    <div class="main-title">
+      <h2>Educaci<span>on</span><span class="bg-text">Mi educacion</span></h2>
+    </div>
+    <app-boton-edu *ngIf="esAdmin" class="boton" color="{{abrirEducacion ? 'black' : 'blue'}}"
+      texto="{{abrirEducacion ? '-' : '+'}}" (btnClick)="toogleAgregarEducacion()">
+    </app-boton-edu>
+  </div>
+  <app-educaciones></app-educaciones>
+</div>

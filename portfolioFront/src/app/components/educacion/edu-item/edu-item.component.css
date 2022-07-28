@@ -1,0 +1,52 @@
+
+#edit {
+    margin: 0px 0px 0px 10px;
+}
+
+#edit:hover {
+    color: rgb(156, 156, 156);
+}
+
+#delete:hover {
+    color: brown;
+}
+
+fa-icon:hover {
+    font-size: 20px;
+}
+
+fa-icon {
+    cursor: pointer;
+    float: inline-end;
+    padding: 2px;
+}
+
+section.resume-section {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    max-width: 75rem;
+  }
+  section.resume-section .resume-section-content {
+    width: 100%;
+  }
+  
+  @media (min-width: 768px) {
+    section.resume-section {
+      min-height: 25vh;
+    }
+  }
+  @media (min-width: 992px) {
+    section.resume-section {
+      padding-left: 3rem;
+      padding-right: 3rem;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+  }
+  .icon{
+    padding:3px 6px;
+  }

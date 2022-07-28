@@ -1,0 +1,11 @@
+<div class="about-stats">
+    <div class="titulo">
+      <div class="main-title">
+        <h2>Habilidad<span>es</span><span class="bg-text">Mis habilidades</span></h2>
+      </div>
+      <app-boton-habi *ngIf="esAdmin" class="boton" color="{{abrirHabilidad ? 'black' : 'blue'}}"
+        texto="{{abrirHabilidad ? '-' : '+'}}" (btnClick)="toogleAgregarHabilidad()">
+      </app-boton-habi>
+    </div>
+    <app-habilidades></app-habilidades>
+  </div> 

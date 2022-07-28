@@ -1,0 +1,59 @@
+<section class="container" id="about">
+  
+    <div class="about-container">
+        <div class="left-about">
+            <h4>Informacion sobre mi</h4>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Eveniet labore nihil obcaecati consequatur. Debitis error doloremque, 
+                vero eos vel nemo eius voluptatem dicta tenetur modi. <br /> <br /> La musica
+                delectus dolore fugiat exercitationem a, 
+                ipsum quidem quo enim natus accusamus labore dolores nam. Unde.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                Harum non necessitatibus deleniti eum soluta.
+            </p>
+           
+        </div>
+        <fa-icon *ngIf="esAdmin" id="edit" [icon]="faPencil" (click)="openModal()"></fa-icon>
+        <fa-icon *ngIf="esAdmin" id="delete" [icon]="faDelete" (click)="eliminarEspa(espa)"></fa-icon>
+        
+        
+    </div>
+    
+    
+    </section>
+
+<!--<div class="contenedorEspa">
+    <div class="espa">
+        <p>{{espa.texto}}</p>
+    </div>
+    <fa-icon *ngIf="esAdmin" id="delete" [icon]="faDelete" (click)="eliminarEspa(espa)"></fa-icon>
+    <fa-icon *ngIf="esAdmin" id="edit" [icon]="faPencil" (click)="openModal()"></fa-icon>
+</div>-->
+
+<div *ngIf="abrirModal == true">
+    <div class="contenedorEditar">
+        <button class="cerrar" (click)="cerrarModal()">Cerrar</button>
+        <h2>Editar Item</h2>
+        <div class="formulario">
+            <form
+                [formGroup]="activeForm"
+                novalidate
+            >
+            <div class="form-control">
+                <label for="texto">Texto</label>
+                <textarea
+                    formControlName="texto"
+                    type="text"
+                    name="texto" 
+                    id="texto"
+                    placeholder="{{espa.texto}}"
+                    required=""
+                ></textarea>
+            </div>
+            <div></div>
+            <input type="button" value="Actualizar Item" (click)="editarEspa(activeForm)" class="boton">
+            </form>
+        </div>
+    </div>
+</div>
